@@ -13,7 +13,7 @@ function jsonApiErrors (err, req, res, next) {
     errors: err.map((error) => {
       return {
         status: error.status,
-        code: error.code,
+        name: error.name,
         message: error.message,
         stack: isProduction ? '' : error.stack
       }
