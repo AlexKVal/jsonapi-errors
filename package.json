@@ -1,0 +1,35 @@
+{
+  "name": "jsonapi-errors",
+  "version": "0.0.1",
+  "description": "respond with JSON-API compliant errors",
+  "main": "index.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/alexkval/jsonapi-errors.git"
+  },
+  "keywords": [
+    "jsonapi",
+    "express",
+    "middleware",
+    "handle",
+    "errors"
+  ],
+  "author": {
+    "name": "Alexander Shemetovsky",
+    "email": "alexkval@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexkval/jsonapi-errors/issues"
+  },
+  "homepage": "https://github.com/alexkval/jsonapi-errors#readme"
+}
