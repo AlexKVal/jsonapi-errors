@@ -1,6 +1,6 @@
 {
   "name": "jsonapi-errors",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "respond with JSON-API compliant errors",
   "main": "index.js",
   "files": [
@@ -10,7 +10,8 @@
     "index.js"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard",
+    "release": "release"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,10 @@
   "bugs": {
     "url": "https://github.com/alexkval/jsonapi-errors/issues"
   },
-  "homepage": "https://github.com/alexkval/jsonapi-errors#readme"
+  "homepage": "https://github.com/alexkval/jsonapi-errors#readme",
+  "devDependencies": {
+    "mt-changelog": "^0.6.2",
+    "release-script": "^1.0.2",
+    "standard": "^6.0.8"
+  }
 }
