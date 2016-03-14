@@ -13,7 +13,7 @@ function jsonApiErrors (err, req, res, next) {
   const errorResponse = {
     errors: err.map((error) => {
       let jsonApiErrorObject = {
-        status: error.status.toString(),
+        status: (error.status || 500).toString(),
         source: error.source,
         title: error.title,
         detail: error.message
