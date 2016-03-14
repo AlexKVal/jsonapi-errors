@@ -2,6 +2,8 @@
 
 Express middleware that sends errors in JSON-API compliant format.
 
+[jsonapi error-objects](http://jsonapi.org/format/#error-objects)
+
 It prevents error.stack leaking in non-development mode.
 
 _ES6 compatible `node@^4.3.1` engine required._
@@ -46,10 +48,9 @@ will be
 {
   "errors": [
     {
-      status: 403,
-      name: 'ForbiddenError',
-      message: 'User has insufficient access rights',
-      stack: '' // or error.stack in development mode
+      "status": "403",
+      "title": "Forbidden",
+      "detail": "User has insufficient access rights"
     }
   ]
 }

@@ -1,3 +1,4 @@
+'use strict'
 /**
  * JSON-API compliant errors middleware
  * It should be placed after api routes
@@ -11,12 +12,16 @@ function jsonApiErrors (err, req, res, next) {
 
   const errorResponse = {
     errors: err.map((error) => {
-      return {
-        status: error.status,
-        name: error.name,
-        message: error.message,
-        stack: isProduction ? '' : error.stack
+      let jsonApiErrorObject = {
+        status: error.status.toString(),
+        source: error.source,
+        title: error.title,
+        detail: error.message
       }
+
+      jsonApiErrorObject.stack = isProduction ? undefined : error.stack
+
+      return jsonApiErrorObject
     })
   }
 
