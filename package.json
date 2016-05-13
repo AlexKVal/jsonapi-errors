@@ -1,6 +1,6 @@
 {
   "name": "jsonapi-errors",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "respond with JSON-API compliant errors",
   "main": "index.js",
   "files": [
