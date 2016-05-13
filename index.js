@@ -1,4 +1,6 @@
 'use strict'
+const debug = require('debug')('jsonApiErrors')
+
 /**
  * JSON-API compliant errors middleware
  * It should be placed after api routes
@@ -20,6 +22,8 @@ function jsonApiErrors (err, req, res, next) {
       }
 
       jsonApiErrorObject.stack = isProduction ? undefined : error.stack
+
+      debug(error.stack)
 
       return jsonApiErrorObject
     })
